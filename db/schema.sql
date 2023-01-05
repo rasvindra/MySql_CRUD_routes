@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS retail_backend_db;
+DROP DATABASE IF EXISTS fullstack_retail_db;
 
-CREATE DATABASE retail_backend_db;
+CREATE DATABASE fullstack_retail_db;
