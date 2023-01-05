@@ -22,7 +22,7 @@ router.post("/", async (req,res) => {
             category_name:req.body.category_name,
             id:req.body.id
         })
-        res.status(200).json(newCatergorys)
+        res.status(201).json(newCatergorys)
     } catch (err) {
         res.status(500).json({
             msg:"Server Error. Please Try Again!",
