@@ -45,7 +45,7 @@ router.get("/:id", (req, res)=> {
     })
 })
 
-router.delete("/:id",(res,res)=>{
+router.delete("/:id",(req,res)=>{
     Category.destroy({
         where:{
             id:req.params.id
