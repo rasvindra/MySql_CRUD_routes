@@ -2,6 +2,7 @@ require("dotenv").config();
 const sequelize = require("../config/connection");
 const {Product,Category,Tag,ProductTag} = require("../models");
 
+// seds file that I compiled into one file instead on modulizing
 const productSeed = [
     {
         product_name: 'Plain T-Shirt',

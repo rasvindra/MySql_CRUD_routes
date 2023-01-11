@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
+// JS file to create Tag Model
 class Tag extends Model{}
 
 Tag.init({

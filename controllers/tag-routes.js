@@ -2,6 +2,7 @@ const express =require('express');
 const router =express.Router();
 const {Product, Tag} = require("../models");
 
+// GET routes for tags
 router.get("/", async (req,res) => {
     try {
         const catergorys = await Tag.findAll({
@@ -16,6 +17,7 @@ router.get("/", async (req,res) => {
     }
 })
 
+// POST routes for tags
 router.post("/", async (req,res) => {
     try {
         const newTag = await Tag.create({
@@ -31,6 +33,7 @@ router.post("/", async (req,res) => {
     }
 })
 
+// GET by ID routes for tags
 router.get("/:id", (req, res)=> {
     Tag.findByPk(req.params.id).then(tag=>{
         if(!tag){
@@ -45,6 +48,7 @@ router.get("/:id", (req, res)=> {
     })
 })
 
+// DELETE routes for tags
 router.delete("/:id",(req,res)=>{
     Tag.destroy({
         where:{
@@ -63,6 +67,7 @@ router.delete("/:id",(req,res)=>{
     })
 })
 
+// UPDATE routes for tags
 router.put("/:id",(req,res)=>{
     Tag.update({
         tag_name:req.body.tag_name

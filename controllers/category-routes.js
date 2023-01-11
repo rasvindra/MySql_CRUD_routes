@@ -2,6 +2,7 @@ const express =require('express');
 const router =express.Router();
 const {Product, Category} = require("../models");
 
+// GET routes for categories 
 router.get("/", async (req,res) => {
     try {
         const catergorys = await Category.findAll({
@@ -16,6 +17,7 @@ router.get("/", async (req,res) => {
     }
 })
 
+// POST routes for categories 
 router.post("/", async (req,res) => {
     try {
         const newCatergorys = await Category.create({
@@ -31,6 +33,7 @@ router.post("/", async (req,res) => {
     }
 })
 
+// GET by ID routes for categories 
 router.get("/:id", (req, res)=> {
     Product.findByPk(req.params.id).then(category=>{
         if(!category){
@@ -45,6 +48,7 @@ router.get("/:id", (req, res)=> {
     })
 })
 
+// DELETE routes for categories 
 router.delete("/:id",(req,res)=>{
     Category.destroy({
         where:{
@@ -63,6 +67,7 @@ router.delete("/:id",(req,res)=>{
     })
 })
 
+// UPDATE routes for categories 
 router.put("/:id",(req,res)=>{
     Category.update({
         category_name:req.body.category_name

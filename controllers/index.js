@@ -4,6 +4,7 @@ const productRoutes = require("./product-routes.js")
 const categoryRoutes = require("./category-routes.js")
 const tagRoutes = require("./tag-routes.js")
 
+// modularized index to export all routes
 router.get("/",(req,res)=>{
     res.send("Routing is Working!")
 })

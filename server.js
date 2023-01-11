@@ -1,3 +1,4 @@
+// creating port to make requests to DB
 require("dotenv").config();
 const express = require("express");
 
