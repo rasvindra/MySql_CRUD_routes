@@ -35,7 +35,7 @@ router.post("/", async (req,res) => {
 
 // GET by ID routes for categories 
 router.get("/:id", (req, res)=> {
-    Product.findByPk(req.params.id).then(category=>{
+    Category.findByPk(req.params.id).then(category=>{
         if(!category){
             return res.status(404).json({msg:"Category does not Exist in Database!"})
         }
