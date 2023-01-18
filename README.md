@@ -35,7 +35,7 @@ rasvindra@hotmail.com <br/>
 [github.com/rasvindra](https://github.com/rasvindra)
 
 ## Deployed
-"Deployed Link goes here"
+https://youtu.be/_fqONINShWM
 
 ## Screenshot
-"Screen shot goes here"
+![](./Public/images/Insomnia_Screenshot.PNG)
